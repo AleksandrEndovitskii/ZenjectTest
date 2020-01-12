@@ -8,7 +8,8 @@ namespace DependencyInjection
         public override void InstallBindings()
         {
             // Same as below, but support multiple interfaces.
-            Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
+            //Container.BindInterfacesAndSelfTo<GameManager>().AsSingle();
+            Container.Bind<IGameManager>().To<GameManager>().AsSingle();
             Container.Bind<ILightManager>().To<LightManager>().AsSingle();
         }
     }

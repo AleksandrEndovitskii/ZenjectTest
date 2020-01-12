@@ -11,13 +11,13 @@ namespace Managers
             _lightManager = lightManager;
         }
 
-        public void Test()
+        public void SwitchLightning()
         {
-            Debug.Log("Test started");
+            Debug.Log("Lightning switched started");
 
-            _lightManager.IsLightOn = false;
+            _lightManager.IsLightOn = !_lightManager.IsLightOn;
 
-            Debug.Log("Test ended");
+            Debug.Log("Lightning switched ended");
         }
     }
 }
